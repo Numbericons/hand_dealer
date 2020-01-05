@@ -9,11 +9,15 @@ class Table extends React.Component {
     }
   }
 
+  makeDeck(){
+
+  }
+
   render(){
+    let card = `${this.state.deck.cards[0].rank}${this.state.deck.cards[0].suit}`
     return (
       <div>
-        <div>Hello poker world 2!</div>
-        {/* <div>this.deck</div> */}
+        <div>{card}</div>
       </div>
     )
   }
