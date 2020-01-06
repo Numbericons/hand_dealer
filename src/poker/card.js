@@ -65,6 +65,8 @@ export default class Card {
         return "\u2662"
       case "c":
         return "\u2663"
+      default:
+        return 0;
     }
   }
   show() {

@@ -28,7 +28,7 @@ export default class Deck {
   }
 
   draw(){
-    if (this.cards_drawn > 0 && this.cards_drawn % 52 == 0) {
+    if (this.cards_drawn > 0 && this.cards_drawn % 52 === 0) {
       this.cards = this.shuffle(this.cards);
     }
     this.cards_drawn += 1;
