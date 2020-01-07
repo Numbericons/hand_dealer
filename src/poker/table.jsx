@@ -1,5 +1,6 @@
 import React from 'react';
 import Deck from './deck';
+import Player from './player';
 
 export default class Table extends React.Component {
   constructor(props){
