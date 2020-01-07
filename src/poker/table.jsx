@@ -16,7 +16,7 @@ export default class Table extends React.Component {
     for(let i=0; i < 10; i++) { arr.push([]) };
     for(let j=0; j < 10; j++) { arr[j].push(this.state.deck.draw()) };
     for(let k=0; k < 10; k++) { arr[k].push(this.state.deck.draw()) };
-    this.players = arr;
+    this.playerCards = arr;
   }
   
   dealCards(){
@@ -31,9 +31,13 @@ export default class Table extends React.Component {
   }
 
   render(){
+    let players = this.playerCards.map((cards) => (
+      <Player cards={cards}></Player>
+    ));
     return (
       <div>
-        <Player cards={this.players[0]}></Player>
+        {players}
+        {/* <Player cards={this.players[0]}></Player> */}
       </div>
     )
   }
