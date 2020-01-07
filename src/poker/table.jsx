@@ -1,6 +1,7 @@
 import React from 'react';
 import Deck from './deck';
 import Player from './player';
+import Board from './board';
 
 export default class Table extends React.Component {
   constructor(props){
@@ -27,17 +28,29 @@ export default class Table extends React.Component {
   dealBoard(){
     let arr = [];
     for (let z = 0; z < 5; z++) { arr[z] = this.state.deck.draw() };
-    this.state.board = arr;
+    this.boardCards = arr;
+  }
+
+  showBoard(){
+    return this.boardCards.map((card) => (
+      <Board card={card}></Board>
+    ));
+  }
+
+
+  showPlayers(){
+    return this.playerCards.map((cards) => (
+      <Player cards={cards}></Player>
+    ));
   }
 
   render(){
-    let players = this.playerCards.map((cards) => (
-      <Player cards={cards}></Player>
-    ));
+    let players = this.showPlayers();
+    let board = this.showBoard();
     return (
       <div>
+        {board}
         {players}
-        {/* <Player cards={this.players[0]}></Player> */}
       </div>
     )
   }
