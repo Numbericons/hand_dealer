@@ -15,9 +15,9 @@ export default class Table extends React.Component {
 
   playerArr(){
     let arr = [];
-    for(let i=0; i < 10; i++) { arr.push([]) };
-    for(let j=0; j < 10; j++) { arr[j].push(this.state.deck.draw()) };
-    for(let k=0; k < 10; k++) { arr[k].push(this.state.deck.draw()) };
+    for(let i=0; i < 9; i++) { arr.push([]) };
+    for(let j=0; j < 9; j++) { arr[j].push(this.state.deck.draw()) };
+    for(let k=0; k < 9; k++) { arr[k].push(this.state.deck.draw()) };
     this.playerCards = arr;
   }
   
@@ -50,8 +50,15 @@ export default class Table extends React.Component {
     let board = this.showBoard();
     return (
       <div className="table">
-        {board}
-        {players}
+        <div className="table-head">
+          <h1>Hold'Em Deal Out Simulator</h1>
+          <div className='board'>
+            {board}
+          </div>
+        </div>
+        <div className="players">
+          {players}
+        </div>
       </div>
     )
   }

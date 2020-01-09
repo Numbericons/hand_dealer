@@ -1,5 +1,12 @@
-.table{
-  border: 1px solid black;
+.table-head{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board{
+  display: flex;
+  margin-bottom: 10vh;
 }
 
 .card{
@@ -12,4 +19,17 @@
 
 .hand{
   display: flex;
+  margin: 0vh 8vw 10vh 2vw;
+}
+
+.players{
+  display: flex;
+  width: 120vw;
+  flex-wrap: wrap;
+}
+
+.table-head{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
