@@ -2,6 +2,7 @@ import React from 'react';
 import Deck from './deck';
 import Player from './player';
 import Board from './board';
+import './board.css';
 
 export default class Table extends React.Component {
   constructor(props){
@@ -48,7 +49,7 @@ export default class Table extends React.Component {
     let players = this.showPlayers();
     let board = this.showBoard();
     return (
-      <div>
+      <div className="table">
         {board}
         {players}
       </div>
