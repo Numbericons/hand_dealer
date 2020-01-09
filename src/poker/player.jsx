@@ -1,18 +1,18 @@
 import React from 'react';
 
-export default class Player extends React.Component {
-  constructor(props){
-    super(props);
+function cardStyle(posX, posY){
+  return {
+    backgroundPositionX: posX,
+    backgroundPositionY: posY
   }
-
-  // showBoardCard(pos) {
-  //   let card = document.querySelector(`.table-felt-board-card-${pos + 1}`);
-  //   this.boardCards[pos].render(card, "72px", "106px", true)
-  // }
-
-  render(){
-    return (
-      <div>{this.props.cards[0].show()}{this.props.cards[1].show()}</div>
-    )
-  }
+}
+export default function Player(props) {
+  const card1 = cardStyle(props.cards[0].img_pos_x, props.cards[0].img_pos_y);
+  const card2 = cardStyle(props.cards[1].img_pos_x, props.cards[1].img_pos_y);
+  return (
+    <div className='hand'>
+      <div className='card' style={card1}></div>
+      <div className='card' style={card2}></div>
+    </div>
+  )
 }
