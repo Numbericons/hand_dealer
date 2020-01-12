@@ -11,6 +11,7 @@ export default class Table extends React.Component {
       deck: new Deck()
     }
     this.dealCards();
+    this.newHand = this.newHand.bind(this);
   }
 
   playerArr(){
@@ -37,12 +38,20 @@ export default class Table extends React.Component {
       <Board card={card}></Board>
     ));
   }
-
+  
+  newHand(){
+    debugger
+    this.dealCards();
+  }
 
   showPlayers(){
     return this.playerCards.map((cards) => (
       <Player cards={cards}></Player>
     ));
+  }
+
+  begin() {
+    console.log(this.props.subject);
   }
 
   render(){
@@ -59,8 +68,8 @@ export default class Table extends React.Component {
         <div className="players">
           {players}
         </div>
-        <div classname="new">
-          <button className="new-btn">New Hand</button>
+        <div className="new">
+          <button className="new-btn" onClick={this.newHand}>NEW HAND</button>
         </div>
       </div>
     )
