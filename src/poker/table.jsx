@@ -40,8 +40,10 @@ export default class Table extends React.Component {
   }
   
   newHand(){
-    debugger
     this.dealCards();
+    this.showBoard();
+    this.showPlayers();
+    this.render();
   }
 
   showPlayers(){
@@ -50,8 +52,8 @@ export default class Table extends React.Component {
     ));
   }
 
-  begin() {
-    console.log(this.props.subject);
+  refreshPage(){
+    window.location.reload();
   }
 
   render(){
@@ -69,7 +71,7 @@ export default class Table extends React.Component {
           {players}
         </div>
         <div className="new">
-          <button className="new-btn" onClick={this.newHand}>NEW HAND</button>
+          <button className="new-btn" onClick={this.refreshPage}>NEW HAND</button>
         </div>
       </div>
     )
