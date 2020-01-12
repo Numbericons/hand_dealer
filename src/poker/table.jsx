@@ -59,6 +59,9 @@ export default class Table extends React.Component {
         <div className="players">
           {players}
         </div>
+        <div classname="new">
+          <button className="new-btn">New Hand</button>
+        </div>
       </div>
     )
   }
