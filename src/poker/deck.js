@@ -19,8 +19,8 @@ export default class Deck {
     let deck = [];
     for (let i = 0; i < suits.length; i++) {
       for (let j = 0; j < values.length; j++) {
-        let pos_x = j * -78 - 6;
-        const pos_y = i * -114 - 8;
+        const pos_x = j * -78 - 6;
+        const pos_y = i * -114 - 6;
         deck.push(new Card(values[j], suits[i], pos_x, pos_y, true));
       }
     }
