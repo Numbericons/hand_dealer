@@ -34,8 +34,8 @@ export default class Table extends React.Component {
   }
 
   showBoard(){
-    return this.boardCards.map((card) => (
-      <Board card={card}></Board>
+    return this.boardCards.map((card, i) => (
+      <Board key={`board${i}`} card={card}></Board>
     ));
   }
   
@@ -47,8 +47,8 @@ export default class Table extends React.Component {
   }
 
   showPlayers(){
-    return this.playerCards.map((cards) => (
-      <Player cards={cards}></Player>
+    return this.playerCards.map((cards, i) => (
+      <Player key={`player${i}`} cards={cards}></Player>
     ));
   }
 
