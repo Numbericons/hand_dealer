@@ -1,3 +1,7 @@
+.table{
+  background-image: linear-gradient(limegreen, #34600c);
+}
+
 .table-head{
   display: flex;
   flex-direction: column;
@@ -26,12 +30,6 @@
   display: flex;
   width: 120vw;
   flex-wrap: wrap;
-}
-
-.table-head{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .new {
