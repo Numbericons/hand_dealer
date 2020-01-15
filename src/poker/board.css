@@ -29,7 +29,12 @@
 
 .hand{
   display: flex;
+  flex-direction: column;
   margin: 0vh 10vw 10vh 2vw;
+}
+
+.hand-cards{
+  display: flex;
 }
 
 .players{
