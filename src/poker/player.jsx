@@ -26,7 +26,7 @@ export default function Player(props) {
         <div className='card' style={card1}></div>
         <div className='card' style={card2}></div>
       </div>
-      <h4>{handRank}</h4>
+      <h4>{handRank.descr}</h4>
     </div>
   )
 }
