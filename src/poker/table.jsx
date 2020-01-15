@@ -48,7 +48,7 @@ export default class Table extends React.Component {
 
   showPlayers(){
     return this.playerCards.map((cards, i) => (
-      <Player key={`player${i}`} cards={cards}></Player>
+      <Player key={`player${i}`} cards={cards} board={this.boardCards}></Player>
     ));
   }
 
