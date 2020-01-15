@@ -9,6 +9,11 @@
   align-items: center;
 }
 
+.table-head-title{
+  font-size: 40px;
+  font-family: Open sans-serif;
+}
+
 .board{
   display: flex;
   margin-bottom: 10vh;
@@ -42,8 +47,9 @@
 .new-btn{
   width: 14vw;
   height: 6vh;
-  font-size: 20px;
-  font-weight: bolder;
+  font-size: 24px;
+  font-family: Open sans-serif;
+  font-weight: 700;
   color: #FF5555;
   background-color: black;
   border: black;

@@ -62,7 +62,7 @@ export default class Table extends React.Component {
     return (
       <div className="table">
         <div className="table-head">
-          <h1>Hold'Em Deal Out Simulator</h1>
+          <h1 className="table-head-title">Hold'Em Deal Out Simulator</h1>
           <div className='board'>
             {board}
           </div>
