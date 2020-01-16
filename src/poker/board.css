@@ -16,7 +16,7 @@
 
 .board{
   display: flex;
-  margin-bottom: 10vh;
+  margin-bottom: 6vh;
 }
 
 .card{
@@ -37,6 +37,16 @@
   display: flex;
 }
 
+.hand-val{
+  display: flex;
+  justify-content: center;
+}
+
+.hand-val-txt{
+  font-family: Open sans-serif;
+  font-size: 18px;
+}
+
 .players{
   height: 51vh;
   width: 120vw;
@@ -47,6 +57,7 @@
 .new {
   display: flex;
   justify-content: center;
+  margin-top: 4vh;
 }
 
 .new-btn{
