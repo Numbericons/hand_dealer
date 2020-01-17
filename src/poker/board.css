@@ -30,7 +30,7 @@
 .hand{
   display: flex;
   flex-direction: column;
-  margin: 0vh 10vw 5vh 2vw;
+  margin: 0vh 6vw 5vh 2vw;
 }
 
 .hand-cards{
@@ -40,7 +40,6 @@
 .hand-val{
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .hand-val-txt{
@@ -51,7 +50,7 @@
 
 .players{
   height: 51vh;
-  width: 120vw;
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
 }
