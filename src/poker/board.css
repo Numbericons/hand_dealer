@@ -39,12 +39,14 @@
 
 .hand-val{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hand-val-txt{
   font-family: Open sans-serif;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .players{

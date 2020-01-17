@@ -9,11 +9,14 @@ function cardStyle(posX, posY){
 }
 
 function handVal(card1, card2, board) {
-  let handArr = [`${card1.rank}${card1.suit}`, `${card2.rank}${card2.suit}`];
+  let floppedHand = [`${card1.rank}${card1.suit}`, `${card2.rank}${card2.suit}`];
+  let fullHand = [`${card1.rank}${card1.suit}`, `${card2.rank}${card2.suit}`];
   for (let i = 0, len = board.length; i < len; i++) {
-    handArr.push(`${board[i].rank}${board[i].suit}`)
+    let card = (`${board[i].rank}${board[i].suit}`);
+    fullHand.push(card);
+    if (i < 3) floppedHand.push(card);
   }
-  return Hand.solve(handArr);
+  return [Hand.solve(floppedHand), Hand.solve(fullHand)];
 }
 
 export default function Player(props) {
@@ -27,7 +30,8 @@ export default function Player(props) {
         <div className='card' style={card2}></div>
       </div>
       <div className='hand-val'>
-        <h4 className='hand-val-txt'>{handRank.descr}</h4>
+        <div className='hand-val-txt'>Flopped: {handRank[0].descr}</div>
+        <div className='hand-val-txt'>Overall: {handRank[1].descr}</div>
       </div>
     </div>
   )
