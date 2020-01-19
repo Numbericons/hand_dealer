@@ -14,6 +14,10 @@ export default class Table extends React.Component {
     this.newHand = this.newHand.bind(this);
   }
 
+  newDeck(){
+    this.setState({ deck: new Deck() });
+  }
+
   playerArr(){
     let arr = [];
     for(let i=0; i < 9; i++) { arr.push([]) };
@@ -40,10 +44,11 @@ export default class Table extends React.Component {
   }
   
   newHand(){
+    this.newDeck();
     this.dealCards();
     this.showBoard();
     this.showPlayers();
-    this.render();
+    this.setState({reset: true});
   }
 
   showPlayers(){
@@ -53,7 +58,8 @@ export default class Table extends React.Component {
   }
 
   refreshPage(){
-    window.location.reload();
+    this.setState({deck: true});
+    // window.location.reload();
   }
 
   render(){
@@ -71,7 +77,8 @@ export default class Table extends React.Component {
           {players}
         </div>
         <div className="new">
-          <button className="new-btn" onClick={this.refreshPage}>NEW HAND</button>
+          <button className="new-btn" onClick={this.newHand}>NEW HAND</button>
+          {/* <button className="new-btn" onClick={this.refreshPage}>NEW HAND</button> */}
         </div>
       </div>
     )
