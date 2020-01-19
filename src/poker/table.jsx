@@ -59,7 +59,6 @@ export default class Table extends React.Component {
 
   refreshPage(){
     this.setState({deck: true});
-    // window.location.reload();
   }
 
   render(){
@@ -78,7 +77,6 @@ export default class Table extends React.Component {
         </div>
         <div className="new">
           <button className="new-btn" onClick={this.newHand}>NEW HAND</button>
-          {/* <button className="new-btn" onClick={this.refreshPage}>NEW HAND</button> */}
         </div>
       </div>
     )

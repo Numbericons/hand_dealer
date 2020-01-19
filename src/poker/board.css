@@ -1,6 +1,7 @@
 .table{
   height: 100vh;
   background-image: linear-gradient(limegreen, #34600c);
+  border-radius: 200px;
 }
 
 .table-head{
